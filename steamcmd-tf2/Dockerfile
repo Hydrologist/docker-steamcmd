@@ -1,8 +1,8 @@
 # escape=`
 
-LABEL maintainer="Michael Dai <mik99935@.com>"
-
 FROM hydrologist/steamcmd:latest
+
+LABEL maintainer="Michael Dai <mik99935@.com>"
 
 HEALTHCHECK NONE
 
