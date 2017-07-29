@@ -1,5 +1,7 @@
 # escape=`
 
+LABEL maintainer="Michael Dai <mik99935@.com>"
+
 FROM hydrologist/steamcmd:latest
 
 HEALTHCHECK NONE
