@@ -1,11 +1,11 @@
 # escape=`
 
-FROM steamcmd:latest
+FROM hydrologist/steamcmd:latest
 
 HEALTHCHECK NONE
 
 # Copy entry point script
-COPY ./entrypoint.sh /home/steam/entrypoint.sh
+COPY ./docker-entrypoint.sh /home/steam/docker-entrypoint.sh
 
 # Install dependencies
 RUN chown steam /home/steam/entrypoint.sh &&`

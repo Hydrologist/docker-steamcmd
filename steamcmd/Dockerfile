@@ -1,6 +1,6 @@
 # escape=`
 
-FROM ubuntu:latest
+FROM ubuntu:16.04
 
 HEALTHCHECK NONE
 
