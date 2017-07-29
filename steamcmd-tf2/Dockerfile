@@ -8,8 +8,8 @@ HEALTHCHECK NONE
 COPY ./docker-entrypoint.sh /home/steam/docker-entrypoint.sh
 
 # Install dependencies
-RUN chown steam /home/steam/entrypoint.sh &&`
-  chmod +x /home/steam/entrypoint.sh &&`
+RUN chown steam /home/steam/docker-entrypoint.sh &&`
+  chmod +x /home/steam/docker-entrypoint.sh &&`
   apt-get update &&`
   apt-get upgrade -y &&`
   apt-get install -y`
@@ -42,7 +42,7 @@ ENV TF2_PORT=27015
 # Expose the server ports
 EXPOSE ${TF2_PORT}/tcp ${TF2_PORT}/udp
 
-ENTRYPOINT ["/home/steam/entrypoint.sh"]
+ENTRYPOINT ["/home/steam/docker-entrypoint.sh"]
 
 CMD ["-game tf", "+quit"]
 
